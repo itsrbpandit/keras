@@ -1,4 +1,9 @@
 #!/bin/bash
-isort --sl keras
-black --line-length 80 keras
-flake8 keras
+set -Euo pipefail
+
+base_dir=$(dirname $(dirname $0))
+
+ruff check --config "${base_dir}/pyproject.toml" --fix .
+
+ruff format --config "${base_dir}/pyproject.toml" .
+

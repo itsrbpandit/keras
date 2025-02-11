@@ -1,21 +1,22 @@
-# macOS
 .DS_Store
-
-# Python temp files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Vim temp files
-*.swp
-*.swo
-
-# VS Code configs
-.devcontainer
+*.pyc
+.vscode-test
+__pycache__
+**/.vscode-test/**
+**/.vscode test/**
+**/.vscode-smoke/**
+**/.venv*/
+bin/**
+build/**
+obj/**
+.pytest_cache
+tmp/**
+.vs/
+dist/**
+*.egg-info/*
 .vscode
-
-# Bazel files
-bazel-bin
-bazel-keras
-bazel-out
-bazel-testlogs
+examples/**/*.jpg
+.python-version
+.coverage
+*coverage.xml
+.ruff_cache
